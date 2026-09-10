@@ -1,0 +1,33 @@
+{
+  "appId": "com.wyntek.placeit",
+  "appName": "PlaceIT",
+  "webDir": "www",
+  "server": {
+    "url": "https://www.getplaceit.com",
+    "cleartext": false,
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "appendUserAgent": "PlaceItApp/1"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 250,
+      "launchAutoHide": true,
+      "launchFadeOutDuration": 200,
+      "backgroundColor": "#ffffff",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#ffffff"
+    },
+    "Keyboard": {
+      "resize": "body",
+      "resizeOnFullScreen": true
+    }
+  },
+  "appendUserAgent": "PlaceItApp/1"
+}
