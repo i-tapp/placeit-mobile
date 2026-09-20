@@ -6,7 +6,7 @@ Microsoft Store package too). No copy of the website lives here - the app
 always loads the live site, so anything deployed to getplaceit.com shows up
 immediately, no app update needed.
 
-App ID used: `com.wyntek.placeit`. **Permanent once you publish** - change it
+App ID used: `com.itapp.placeit`. **Permanent once you publish** - change it
 in `capacitor.config.json` before your first release if you want something
 else.
 
