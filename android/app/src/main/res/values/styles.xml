@@ -12,6 +12,7 @@
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/system_bar_strip</item>
         <item name="android:background">@null</item>
         <!-- Lets content draw into the notch/punch-hole camera area instead
              of the OS reserving a blank strip there. Paired with the
