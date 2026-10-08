@@ -26,7 +26,7 @@
     },
     "Keyboard": {
       "resize": "body",
-      "resizeOnFullScreen": true
+      "resizeOnFullScreen": false
     }
   },
   "appendUserAgent": "PlaceItApp/1"
