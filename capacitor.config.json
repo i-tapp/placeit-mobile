@@ -20,10 +20,6 @@
       "androidScaleType": "CENTER_CROP",
       "showSpinner": false
     },
-    "StatusBar": {
-      "style": "DARK",
-      "backgroundColor": "#ffffff"
-    },
     "Keyboard": {
       "resize": "body",
       "resizeOnFullScreen": false

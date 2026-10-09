@@ -31,7 +31,7 @@ public class MainActivity extends BridgeActivity {
       return WindowInsetsCompat.CONSUMED;
     });
 
-    applySystemBarIcons();
+    applySystemBarIconsSoon();
   }
 
   @Override
@@ -46,9 +46,32 @@ public class MainActivity extends BridgeActivity {
   }
 
   @Override
+  public void onResume() {
+    super.onResume();
+    applySystemBarIconsSoon();
+  }
+
+  @Override
+  public void onWindowFocusChanged(boolean hasFocus) {
+    super.onWindowFocusChanged(hasFocus);
+    if (hasFocus) applySystemBarIconsSoon();
+  }
+
+  @Override
   public void onConfigurationChanged(Configuration newConfig) {
     super.onConfigurationChanged(newConfig);
+    applySystemBarIconsSoon();
+  }
+
+  // The Capacitor StatusBar plugin applies its own style on the main thread
+  // shortly AFTER onCreate/onStart/onResume have run, which used to win and
+  // leave dark icons on the dark strip. So apply now and again a moment later.
+  private void applySystemBarIconsSoon() {
     applySystemBarIcons();
+    View decor = getWindow().getDecorView();
+    decor.post(this::applySystemBarIcons);
+    decor.postDelayed(this::applySystemBarIcons, 400);
+    decor.postDelayed(this::applySystemBarIcons, 1500);
   }
 
   // Light icons on the dark strip in dark mode, dark icons on white in light mode.
